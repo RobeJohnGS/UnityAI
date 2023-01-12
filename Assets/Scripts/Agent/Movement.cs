@@ -20,7 +20,7 @@ public class Movement : MonoBehaviour
     private void LateUpdate()
     {
         velocity += acceleration * Time.deltaTime;
-        //velocity = Utilities.ClampMagnitude(velocity, minSpeed, maxSpeed);
+        velocity = Utilities.ClampMagnitude(velocity, minSpeed, maxSpeed);
 
         transform.position += velocity * Time.deltaTime;
         if (velocity.sqrMagnitude > 0.1f)

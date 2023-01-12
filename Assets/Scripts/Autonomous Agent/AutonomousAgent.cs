@@ -30,7 +30,7 @@ public class AutonomousAgent : Agent
         }
 
         //wowzers
-        //transform.position = Utilities.Wrap(transform.position, new Vector3(-10, -10, -10), new Vector3(10, 10, 10));
+        transform.position = Utilities.Wrap(transform.position, new Vector3(-10, -10, -10), new Vector3(10, 10, 10));
 
         if (movement.acceleration.sqrMagnitude <= movement.maxForce * 0.1f)
         {
