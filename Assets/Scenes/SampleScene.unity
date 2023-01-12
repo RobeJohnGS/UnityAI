@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d57c08d02f618ea419d41c4b7c85a0f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 1
+  distance: 40
   maxAngle: 45
 --- !u!114 &256554214
 MonoBehaviour:
@@ -247,8 +247,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bc98ad59c93a4d44a3b350e4b7a3632, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  perception: {fileID: 0}
-  movement: {fileID: 0}
+  perception: {fileID: 256554213}
+  movement: {fileID: 256554214}
 --- !u!4 &256554216
 Transform:
   m_ObjectHideFlags: 0

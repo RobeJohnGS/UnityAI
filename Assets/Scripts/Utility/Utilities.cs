@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static Vector3 Wrap(Vector3 v, Vector3 min, Vector3 max)
     {
-        
+        Vector3 result = v;
+
+        return v;
     }
 
-    // Update is called once per frame
-    void Update()
+    public static Vector3 ClampMagnitude(Vector3 v, float min, float max)
     {
-        
+        return v.normalized * Mathf.Clamp(v.magnitude, min, max);
     }
 }
