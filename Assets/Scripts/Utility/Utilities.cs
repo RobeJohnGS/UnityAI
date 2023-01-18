@@ -40,4 +40,24 @@ public static class Utilities
     {
         return v.normalized * Mathf.Clamp(v.magnitude, min, max);
     }
+
+    public static Vector3[] GetDirectionsInCircle(int num, float angle)
+    {
+        List<Vector3> result = new List<Vector3>();
+
+        if (num % 2 == 1)
+        {
+            result.Add(Vector3.forward);
+        }
+
+        float angleOffSet = angle / (num - 1);
+
+        for (int i = 0; i < num / 2; i++)
+        {
+            result.Add(Quaternion.AngleAxis(+angleOffSet * i, Vector3.up) * Vector3.forward);
+            result.Add(Quaternion.AngleAxis(-angleOffSet * i, Vector3.up) * Vector3.forward);
+        }
+
+        return result.ToArray();
+    }
 }

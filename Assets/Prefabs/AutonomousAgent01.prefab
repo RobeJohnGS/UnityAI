@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 8935647494323981588}
   - component: {fileID: 8935647494323981589}
   m_Layer: 0
-  m_Name: Agent01
+  m_Name: AutonomousAgent01
   m_TagString: Agent01
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,9 +135,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   perception: {fileID: 8935647494323981586}
   movement: {fileID: 8935647494323981585}
-  wanderDistance: 1
-  wanderRadius: 3
-  wanderDisplacement: 5
+  flockPerception: {fileID: 8935647494323981586}
+  data: {fileID: 11400000, guid: 7f0fcb92279f3dd4e9842d3677980882, type: 2}
 --- !u!114 &8935647494323981585
 MonoBehaviour:
   m_ObjectHideFlags: 0
