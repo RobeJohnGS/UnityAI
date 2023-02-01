@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Steering : MonoBehaviour
+public static class Steering
 {
     public static Vector3 Seek(Agent agent, GameObject target)
     {
@@ -22,7 +22,7 @@ public class Steering : MonoBehaviour
     {
         agent.wanderAngle = agent.wanderAngle + Random.Range(-agent.data.wanderDisplacement, agent.data.wanderDisplacement);
         Quaternion rotation = Quaternion.AngleAxis(agent.wanderAngle, Vector3.up);
-        Vector3 point = rotation * (Vector3.forward * agent.data.wanderRadius);
+        Vector3 point = rotation * (Vector3.forward * agent.data.wanderDistance);
         Vector3 forward = agent.transform.forward * agent.data.wanderDistance;
 
         Vector3 force = CalculateSteering(agent, forward + point);

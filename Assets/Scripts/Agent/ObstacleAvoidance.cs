@@ -14,8 +14,10 @@ public class ObstacleAvoidance : MonoBehaviour
     public bool IsObstacleInFront()
     {
         // check if object is in front of agent 
-        Ray ray = new Ray(transform.position, transform.forward);
-        return Physics.Raycast(ray, distance, layerMask);
+        //Ray ray = new Ray(transform.position, transform.forward);
+        //return Physics.Raycast(ray, distance, layerMask);
+        Ray ray = new Ray(raycastTransform.position, raycastTransform.forward);
+        return Physics.SphereCast(ray, 1, distance, layerMask);
     }
 
     public Vector3 GetOpenDirection()
@@ -24,10 +26,16 @@ public class ObstacleAvoidance : MonoBehaviour
 
         foreach(var direction in directions)
         {
-            Ray ray = new Ray(raycastTransform.transform.position, raycastTransform.transform.rotation * direction);
-            if (!Physics.Raycast(ray, distance, layerMask))
+            Ray ray = new Ray(raycastTransform.position, raycastTransform.rotation * direction);
+            if (!Physics.SphereCast(ray, 1, distance, layerMask))
             {
-                return direction;
+                Debug.DrawRay(ray.origin, ray.direction * distance, Color.white);
+
+                return ray.direction;
+            }
+            else
+            {
+                Debug.DrawRay(ray.origin, ray.direction * distance, Color.red);
             }
 
         }
