@@ -81,7 +81,7 @@ public class NavPath : MonoBehaviour
 	private void GeneratePath()
 	{
 		NavNode.ResetNodes();
-		Path.AStar(startNode, endNode, ref path);
+		//Path.AStar(startNode, endNode, ref path);
 	}
 
 	private void OnDrawGizmos()

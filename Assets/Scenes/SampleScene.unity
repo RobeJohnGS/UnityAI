@@ -945,6 +945,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Agent
       objectReference: {fileID: 0}
+    - target: {fileID: 8935647494323981590, guid: bd8f592b9aa8c284b9462ac1217aa3b6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8935647494323981599, guid: bd8f592b9aa8c284b9462ac1217aa3b6, type: 3}
       propertyPath: m_RootOrder
       value: 4
